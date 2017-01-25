@@ -198,7 +198,7 @@ export default class Search extends Component {
                 style={[
                   styles.input,
                   {
-                    color: textColor, marginLeft: hideBack ? 10 : 0,
+                    color: textColor, marginLeft: hideBack ? 5 : 0,
                     marginTop: (Platform.OS === 'ios' ? heightAdjust / 2 + 10 : 0)
                   }
                 ]}
