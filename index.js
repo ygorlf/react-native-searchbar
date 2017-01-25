@@ -198,7 +198,7 @@ export default class Search extends Component {
                 style={[
                   styles.input,
                   {
-                    color: textColor, marginLeft: hideBack ? 5 : 0,
+                    color: textColor, marginLeft: hideBack ? 0 : 0,
                     marginTop: (Platform.OS === 'ios' ? heightAdjust / 2 + 10 : 0)
                   }
                 ]}
@@ -250,6 +250,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   input: {
+    flex: 1,
+    paddingLeft: 20,
     ...Platform.select({
         ios: { height: 30 },
         android: { height: 50 },
