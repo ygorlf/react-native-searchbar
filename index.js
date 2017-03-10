@@ -216,7 +216,8 @@ export default class Search extends Component {
                     size={28}
                     style={{
                       color: hideX || this.state.input == '' ? backgroundColor : iconColor,
-                      padding: heightAdjust / 2 + 10
+                      paddingRight: heightAdjust / 2 + 15,
+                      paddingTop: 5
                     }}
                   />
               </TouchableOpacity>
@@ -235,7 +236,11 @@ const styles = StyleSheet.create({
     position: 'absolute'
   },
   navWrapper: {
-    width: Dimensions.get('window').width,
+    width: Dimensions.get('window').width * 0.9,
+    marginLeft: Dimensions.get('window').width * 0.05,
+    marginRight: Dimensions.get('window').width * 0.05,
+    marginTop: 10,
+    height: 40
   },
   nav: {
     ...Platform.select({
@@ -246,17 +251,20 @@ const styles = StyleSheet.create({
     }),
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
+    justifyContent: 'space-around'
   },
   input: {
     flex: 1,
-    paddingLeft: 20,
+    justifyContent: 'center',
+    width: Dimensions.get('window').width * 0.9,
+    marginLeft: Dimensions.get('window').width * 0.05,
+    marginRight: Dimensions.get('window').width * 0.05,
+    paddingLeft: 30,
     ...Platform.select({
         ios: { height: 30 },
         android: { height: 50 },
     }),
-    width: Dimensions.get('window').width - 120,
-    fontSize: 20,
+    transform: [{translateY: -8}],
+    fontSize: 14,
   }
 });
