@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
         ios: { height: 30 },
         android: { height: 50 },
     }),
-    transform: [{translateY: -8}],
+    transform: [{translateY: -5}],
     fontSize: 14,
   }
 });
